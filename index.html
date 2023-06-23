@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="dez.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radarska Slika</title>
+    <style>
+        /* Reset default styles */
+        body, h1, img {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Page layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .image-container {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .image-frame {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 67px;
+            bottom: 10px;
+            border: 5px solid #333333;
+            z-index: -1;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666666;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #666666;
+}
+
+        
+        .image-container img {
+            width: 90%;
+            height: auto;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        
+        /* Remove visited link color */
+        button:visited {
+          color: inherit;
+        }
+        
+        /* Responsive design */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+        function toggleMute() {
+            var audio = document.getElementById("background-music");
+            audio.muted = !audio.muted;
+        }
+    </script>
+</head>
+<body>
+
+<nav>Dobrodošli!</nav>
+
+    <div class="container">
+        <h1>Radarska Animacija Slovenije</h1>
+        <div class="image-container">
+            <div class="image-frame"></div>
+            <img src="https://www.meteo.si/uploads/probase/www/observ/radar/si0_zm_pda_anim.gif" alt="Radar Animation">
+            <p class="image-caption">Avtor: Brin Vinkler</p>
+        </div>
+        <button class="mute-button" onclick="toggleMute()">Ugasni ptiče</button>
+        <button onclick="refreshPage()">Osveži stran</button>
+    </div>
+    <audio id="background-music" src="Spring Birds Chirping Sound Effect [FREE DOWNLOAD].mp3" autoplay loop></audio>
+</body>
+</html>
