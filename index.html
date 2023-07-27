@@ -65,10 +65,15 @@
         
 button {
   background-color: #333333;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vh;
+    margin: 0;
   color: #ffffff;
   border: none;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 18px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -107,6 +112,11 @@ button:hover {
     </style>
     <script>
         
+        function playAudio() {
+        var audio = document.getElementById("audioPlayer");
+        audio.play();
+    }
+
     </script>
 </head>
 <body>
@@ -118,8 +128,12 @@ button:hover {
         <div class="image-container">
             <div class="image-frame"></div>
             <img src="https://www.meteo.si/uploads/probase/www/observ/radar/si0_zm_pda_anim.gif" alt="Radar Animation">
-            <p class="image-caption">Avtor: Brin Vinkler</p>
-<audio autoplay>
-        <source src="miami.mp3" type="audio/mpeg">
-    </audio>
+            <p class="image-caption">Avtor: Brin Vinkler <br><br><button onclick="playAudio()">Play</button></p>
+                
+
+
+            <audio id="audioPlayer">
+                <source src="miami.mp3" type="audio/mpeg">
+            </audio>        
+            
 </html>
